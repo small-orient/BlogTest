@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myblog.blog.dao.BloggerDao">
+    <!--持久层操作数据库实现配置文件-->
+
+    <!--注入Blogger-->
+    <resultMap id="BloggerResult" type="Blogger">
+        <id property="id" column="id"></id>
+        <result property="userName" column="username"/>
+        <result property="password" column="password"/>
+        <result property="profile" column="profile"/>
+        <result property="nickName" column="nickname"/>
+        <result property="sign" column="sign"/>
+        <result property="imageName" column="imagename"/>
+    </resultMap>
+
+    <!--配置查询博主信息sql-->
+    <select id="findBloggerData" resultMap="BloggerResult">
+        select * from blogger
+    </select>
+
+</mapper>
