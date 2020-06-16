@@ -30,7 +30,7 @@
                 #{typeName},
             </if>
             <if test="orderNum != null and orderNum != ''">
-                #{orderNum}.
+                #{orderNum},
             </if>
         </trim>
     </insert>
